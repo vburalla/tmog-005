@@ -29,6 +29,20 @@ class MinStackTest {
     }
 
     @Test
+    void testDecissiveMinStack() throws Exception {
+        minStack.push(-2);
+        minStack.push(0);
+        minStack.push(-3);
+        minStack.push(-3);
+        assertEquals(-3, minStack.getMin());
+        minStack.pop();
+        assertEquals(-3,minStack.top());
+        assertEquals(-3, minStack.getMin());
+        minStack.pop();
+        assertEquals(0,minStack.top());
+    }
+
+    @Test
     void push() throws Exception {
 
         minStack.push(10);
